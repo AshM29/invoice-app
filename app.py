@@ -19,8 +19,8 @@ def input_image_details(uploaded_file):
     image_parts=[{'mime_type':uploaded_file.type,'data':bytes_data}]
     return image_parts
 
- else:
-    raise FileNotFoundError('No file uploaded')
+   else:
+      raise FileNotFoundError('No file uploaded')
 
 st.header('Multilanguage Invoice Extractor') #krish nayak on youtube
 
