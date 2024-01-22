@@ -36,7 +36,7 @@ input_prompt="""You are an expert in understanding invoices.
  We will upload an image as a invoice and you will have to answer any question based on the uploaded invoice image."""
 
 if sub:
-  with st.spiner('Wait'):
+  with st.spinner('Wait'):
     image_data=input_image_details(uploaded_file)
     response=get_gemini_response(input_prompt,image_data,input)
     st.subheader('The response is')
