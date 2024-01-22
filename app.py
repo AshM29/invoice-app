@@ -14,12 +14,12 @@ def get_gemini_response(input,image_data,user_prompt):
   return response.text
 
 def input_image_details(uploaded_file):
-  if uploaded_file is not None:
-    bytes_data=uploaded_file.getvalue()
-    image_parts=[{'mime_type':uploaded_file.type,'data':bytes_data}]
-    return image_parts
+    if uploaded_file is not None:
+      bytes_data=uploaded_file.getvalue()
+      image_parts=[{'mime_type':uploaded_file.type,'data':bytes_data}]
+      return image_parts
 
-   else:
+    else:
       raise FileNotFoundError('No file uploaded')
 
 st.header('Multilanguage Invoice Extractor') #krish nayak on youtube
